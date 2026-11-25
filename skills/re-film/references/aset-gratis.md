@@ -33,4 +33,8 @@ film. Ke `<slug>/public/models/` hanya disalin file yang benar-benar dipakai fil
 - Banyak situs di atas memberi tautan zip langsung; unduh dengan `curl -L -o <file> <url>` ke `<kerja>/aset/<sumber>/`,
   ekstrak di sana, hapus zip-nya. Jangan unduh ke `public/` film (folder itu disalin Remotion setiap render).
 - Kalau situs butuh klik/login atau unduhan gagal, minta user mengunduh dan menaruh filenya, sebutkan URL persisnya.
+- **Kenney.nl** memakai tautan unduhan bertanda tangan sekali pakai (lewat tombol "Download" + popup donasi), jadi tidak
+  bisa diunduh otomatis dari terminal. Jangan mencoba mengakalinya. Pilihannya: minta user mengunduh paket yang perlu
+  (mis. Nature Kit) ke `<kerja>/aset/kenney/`, atau bangun properti dari bentuk dasar di kode. Untuk gaya "diorama
+  mainan plastik", properti buatan sendiri sering justru lebih menyatu dengan BoxBot (terbukti di film hari-dinosaurus).
 - Jangan mengambil aset dari situs yang lisensinya tidak jelas, atau aset berhak cipta (karakter terkenal, logo).

@@ -186,6 +186,9 @@ transisi, musik. Tujuannya supaya tiap film punya wajah sendiri dan tidak terasa
   Pastikan font mendukung karakter bahasanya.
 - `src/Film.tsx`: daftar `ADEGAN` (mulai/selesai dari transkrip), audio, subtitle (otomatis per kata bila bahasanya
   sama, per kalimat dari subtitle.json bila beda), end screen ("Tonton juga"/"Watch next" mengikuti bahasa suara).
+- **Bahasa teks di layar:** semua tulisan informasi (label, angka, satuan, judul, end screen) mengikuti **bahasa
+  suara**, termasuk format angkanya (EN: 70,000,000 · 23.5; ID: 70.000.000 · 23,5). Bahasa subtitle hanya berlaku
+  untuk subtitle, yaitu transkripsi/terjemahan narasi. Contoh: suara Inggris + subtitle Indonesia → label tetap Inggris.
 - `src/scenes/*.tsx`: satu komponen per adegan atau per lokasi, impor dari `../../../kit/...`. Hapus
   `ContohAdegan.tsx` setelah dipelajari.
 - `<kerja>/kit/`:

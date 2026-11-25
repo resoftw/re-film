@@ -32,4 +32,5 @@ Boleh juga mengarang gaya baru di luar daftar. Daftar ini titik awal, bukan bata
 - Format vertikal: bidang pandang horizontal sempit. Susun tokoh bertumpuk ke kedalaman (depan-belakang),
   bukan berjajar ke samping; jaga subjek di tengah 60 % tinggi layar (atas & bawah tertutup UI Shorts).
 - Format horizontal: manfaatkan lebar (dua tokoh berhadapan, perjalanan kiri→kanan).
-- Teks di layar (angka, istilah kunci) boleh, singkat, memakai font tema film.
+- Teks di layar (angka, istilah kunci) boleh, singkat, memakai font tema film, dan selalu dalam bahasa suara
+  (bukan bahasa subtitle).
