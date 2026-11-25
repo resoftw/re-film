@@ -1,0 +1,27 @@
+{
+  "name": "re-film-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "stills": "node scripts/stills.mjs"
+  },
+  "overrides": {
+    "csstype": "3.1.3"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^8.17.10",
+    "@remotion/bundler": "^4.0.544",
+    "@remotion/cli": "^4.0.544",
+    "@remotion/google-fonts": "^4.0.544",
+    "@remotion/renderer": "^4.0.544",
+    "@remotion/three": "^4.0.544",
+    "@types/react": "^18.3.31",
+    "@types/three": "^0.169.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.544",
+    "three": "^0.169.0",
+    "typescript": "^5.6.3"
+  }
+}

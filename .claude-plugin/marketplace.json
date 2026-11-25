@@ -1,0 +1,12 @@
+{
+  "name": "re-film",
+  "owner": { "name": "resoftw" },
+  "plugins": [
+    {
+      "name": "re-film",
+      "source": "./",
+      "description": "Bikin film YouTube dari ide sampai siap unggah dengan Remotion + three.js dan robot kotak plastik.",
+      "version": "1.0.0"
+    }
+  ]
+}

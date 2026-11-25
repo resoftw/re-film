@@ -1,0 +1,9 @@
+{
+  "name": "re-film",
+  "version": "1.0.0",
+  "description": "Bikin film YouTube (Shorts/video panjang) dari ide sampai siap unggah: cari ide yang belum ramai di YouTube, riset, narasi TTS, animasi 3D Remotion + three.js dengan robot kotak plastik, dan metadata YouTube.",
+  "author": { "name": "resoftw" },
+  "repository": "https://github.com/resoftw/re-film",
+  "license": "MIT",
+  "keywords": ["video", "youtube", "shorts", "remotion", "threejs", "animation", "indonesia"]
+}
