@@ -199,7 +199,8 @@ transisi, musik. Tujuannya supaya tiap film punya wajah sendiri dan tidak terasa
     `jalan(t)`, `diam(t)`, `kedip(t, wajah)`.
   - `Glb`: memuat model .glb dari `public/` film, dengan ganti warna per nama material.
   - `util`: `camAt(keys, t)` untuk gerak kamera halus antar kunci, `smooth`, `lin`, `pop`, `easeOut`, tipe `Tema`.
-  - `Captions` dan `Endscreen` (placeholder kotak video + lingkaran subscribe).
+  - `Captions` dan `Endscreen` (placeholder kotak video + lingkaran subscribe; prop `latar` untuk adegan 3D pelan).
+  - `Teks`: `Label` (teks informasi yang "pop", posisi tengah atau `kiri`), `Kilat`, `Sapuan` (transisi cahaya).
 - Aset: cek `<kerja>/aset/` dulu, karena mungkin sudah pernah diunduh. Kalau belum ada, unduh dari sumber di
   `references/aset-gratis.md` ke `<kerja>/aset/<sumber>/` dan catat di `aset/SUMBER.md`. Salin **hanya file yang
   dipakai** ke `<slug>/public/models/`, karena Remotion menyalin seluruh `public/` setiap render. Catat di

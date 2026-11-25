@@ -1,7 +1,8 @@
 // Pengaturan satu film. Ubah nilai di sini dulu, baru adegan.
 import type { Tema } from "../../kit/util";
 
-export const FORMAT: "vertikal" | "horizontal" = "vertikal";
+// `as` supaya TypeScript tidak protes saat nilainya diganti ke "horizontal".
+export const FORMAT = "vertikal" as "vertikal" | "horizontal";
 export const W = FORMAT === "vertikal" ? 1080 : 1920;
 export const H = FORMAT === "vertikal" ? 1920 : 1080;
 export const FPS = 30;

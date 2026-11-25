@@ -11,7 +11,9 @@ import argparse
 import json
 import os
 
-os.environ.setdefault("OMP_NUM_THREADS", "2")
+# Thread & beam kecil: di PC dengan RAM pas-pasan, beam 5 / banyak thread bisa gagal "mkl_malloc: failed to allocate".
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
 from faster_whisper import WhisperModel  # noqa: E402
 
 ap = argparse.ArgumentParser()
@@ -21,8 +23,19 @@ ap.add_argument("--model", default="small")
 a = ap.parse_args()
 
 wav = os.path.join(a.film, "narasi.wav")
-m = WhisperModel(a.model, device="cpu", compute_type="int8")
-segs, _ = m.transcribe(wav, language=a.lang, word_timestamps=True, beam_size=5, vad_filter=True)
+
+
+def jalankan(beam):
+    m = WhisperModel(a.model, device="cpu", compute_type="int8", cpu_threads=1, num_workers=1)
+    segs, _ = m.transcribe(wav, language=a.lang, word_timestamps=True, beam_size=beam, vad_filter=True)
+    return list(segs)  # paksa selesai di sini supaya kegagalan memori tertangkap
+
+
+try:
+    segs = jalankan(2)
+except RuntimeError as e:  # kehabisan memori → ulangi dengan beam 1
+    print(f"ulang dengan beam 1 ({e})")
+    segs = jalankan(1)
 
 lines, words, sentences = [], [], []
 for s in segs:
