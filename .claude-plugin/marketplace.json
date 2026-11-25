@@ -1,6 +1,7 @@
 {
   "name": "re-film",
   "owner": { "name": "resoftw" },
+  "description": "Skill Claude Code untuk bikin film YouTube dari ide sampai siap unggah (Remotion + three.js).",
   "plugins": [
     {
       "name": "re-film",
