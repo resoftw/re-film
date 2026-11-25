@@ -48,8 +48,8 @@ Lalu cukup bilang ke Claude: *"bikin film baru dong"*.
 ```
 skills/re-film/
   SKILL.md              alur kerja lengkap (dibaca Claude)
-  scripts/              yt_check.py (cek YouTube), transcribe.py (transkrip per kata)
-  assets/workspace/     dipasang SEKALI di folder kerja: package.json, kit/ (BoxBot, Stage, Glb, Captions, Endscreen)
+  scripts/              yt_check.py (cek YouTube), transcribe.py (transkrip per kata), cari_footage.py (gambar/video gratis + lisensi)
+  assets/workspace/     dipasang SEKALI di folder kerja: package.json, kit/ (BoxBot, Stage, Glb, Captions, Endscreen, Teks, Footage)
   assets/film/          kerangka satu film (src/, public/)
   references/           menu gaya visual, sumber aset gratis, panduan metadata YouTube
 ```

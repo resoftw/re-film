@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { useThree } from "@react-three/fiber";
 import { cancelRender, continueRender, delayRender, staticFile } from "remotion";
 import type { V3 } from "./util";
 
@@ -15,9 +16,17 @@ const load = (file: string) => {
 export const useGlb = (file: string) => {
   const [scene, setScene] = useState<THREE.Group | null>(null);
   const [handle] = useState(() => delayRender(`glb ${file}`));
+  const { advance } = useThree();
   useEffect(() => {
-    load(file).then((s) => { setScene(s); continueRender(handle); }).catch((e) => cancelRender(e));
-  }, [file, handle]);
+    load(file).then((s) => setScene(s)).catch((e) => cancelRender(e));
+  }, [file]);
+  // ThreeCanvas hanya menggambar saat frame berganti: paksa satu gambar ulang setelah model terpasang,
+  // baru lepas delayRender (kalau tidak, frame pertama/still tampil tanpa model).
+  useEffect(() => {
+    if (!scene) return;
+    const id = requestAnimationFrame(() => { advance(performance.now()); continueRender(handle); });
+    return () => cancelAnimationFrame(id);
+  }, [scene, handle, advance]);
   return scene;
 };
 

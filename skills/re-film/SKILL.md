@@ -112,6 +112,8 @@ ini ke user dalam satu kalimat.
 Jalankan beberapa WebSearch sekaligus. Cari sumber primer atau tepercaya (jurnal, lembaga, museum, media besar).
 Kumpulkan angka, tahun, nama, istilah, dan satu-dua detail kecil yang jarang diketahui (detail inilah yang membuat
 penonton bertahan). Kalau ada sumber yang bertentangan, pakai angka yang paling aman lalu catat.
+Sambil riset, catat calon footage nyata yang bisa memperkuat cerita (foto arsip, rekaman asli). Pencarian dan
+pengunduhannya dilakukan di tahap 4b.
 
 ### 2b. Karang ceritanya
 Jangan sekadar mendaftar fakta. Bangun cerita dengan tokoh BoxBot (mis. robot penjelajah yang penasaran, ilmuwan,
@@ -201,10 +203,19 @@ transisi, musik. Tujuannya supaya tiap film punya wajah sendiri dan tidak terasa
   - `util`: `camAt(keys, t)` untuk gerak kamera halus antar kunci, `smooth`, `lin`, `pop`, `easeOut`, tipe `Tema`.
   - `Captions` dan `Endscreen` (placeholder kotak video + lingkaran subscribe; prop `latar` untuk adegan 3D pelan).
   - `Teks`: `Label` (teks informasi yang "pop", posisi tengah atau `kiri`), `Kilat`, `Sapuan` (transisi cahaya).
+  - `Footage`: `FotoBingkai` (gambar/video nyata berbingkai polaroid/tv/kartu) dan `PapanFoto` (gambar di dunia 3D).
+  - Kit di `<kerja>` yang lebih lama dari skill tidak otomatis diperbarui. Kalau komponen di atas belum ada di
+    `<kerja>/kit`, salin **hanya file yang belum ada** dari `<skill>/assets/workspace/kit/`.
 - Aset: cek `<kerja>/aset/` dulu, karena mungkin sudah pernah diunduh. Kalau belum ada, unduh dari sumber di
   `references/aset-gratis.md` ke `<kerja>/aset/<sumber>/` dan catat di `aset/SUMBER.md`. Salin **hanya file yang
   dipakai** ke `<slug>/public/models/`, karena Remotion menyalin seluruh `public/` setiap render. Catat di
   `<slug>/CREDITS.md`.
+- **Footage nyata (gambar/video gratis):** untuk setiap adegan yang lebih kuat dengan bukti asli (foto arsip,
+  dokumen lama, rekaman NASA, slow-motion, mikroskop), cari bahannya dengan
+  `python <skill>/scripts/cari_footage.py "<kueri Inggris>" --jenis gambar|video` (Wikimedia Commons, NASA, plus
+  Pexels/Pixabay bila API key-nya ada). Ikuti `references/footage.md`: hanya lisensi aman (PD/CC0/CC BY/BY-SA,
+  Pexels, Pixabay; hindari NC/ND), maksimal ±20 % durasi, selalu dibingkai lewat kit `Footage` (`FotoBingkai` 2D
+  atau `PapanFoto` 3D), dan semua dicatat di `CREDITS.md` + deskripsi YouTube bila wajib atribusi.
 - Musik/SFX opsional: `<Audio>` dengan volume rendah, narasi harus tetap jelas.
 
 Prinsip animasi (inilah yang membuat hasilnya terlihat dibuat sungguh-sungguh):
