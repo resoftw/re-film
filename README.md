@@ -17,7 +17,8 @@ dari ide sampai siap unggah, dengan tokoh robot kotak plastik berkilat dalam dun
 5. **Video.** Remotion + three.js: robot BoxBot plastik, aset gratis (Kenney, Quaternius, Poly Haven, …), dan gaya
    visual yang berganti mengikuti tema supaya tidak terasa otomatis. Subtitle mengikuti kata yang diucapkan, dan
    video non-Shorts ≥ 3 menit diberi placeholder end screen 20 detik.
-6. **Siap unggah.** Saran judul, deskripsi (dengan bab), tag, dan kategori YouTube.
+6. **Siap unggah.** Saran judul, deskripsi (dengan bab), tag, kategori YouTube, dan prompt thumbnail siap tempel ke
+   generator gambar AI.
 
 ## Pasang
 

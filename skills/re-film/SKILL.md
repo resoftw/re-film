@@ -235,7 +235,8 @@ npx remotion render <slug>/src/index.ts Film <slug>/out/<slug>.mp4 --public-dir=
 - Salin hasil akhir ke `<slug>/<slug>.mp4`.
 
 ## Tahap 5: Siap unggah
-Ikuti `references/youtube-meta.md`. Metadata ditulis dalam **bahasa suara**. Kalau subtitle-nya beda bahasa, tambahkan
+Ikuti `references/youtube-meta.md`: judul, deskripsi, tag, kategori, dan **prompt thumbnail** untuk generator gambar
+AI (bahasa Inggris, tokoh & gaya sesuai treatment, teks thumbnail dalam bahasa suara). Metadata ditulis dalam **bahasa suara**. Kalau subtitle-nya beda bahasa, tambahkan
 juga judul dan deskripsi terjemahan (untuk fitur "Terjemahan" di YouTube Studio), plus file `.srt` dari
 subtitle.json/segments.json bila user mau mengunggah subtitle terpisah. Berikan di chat, lalu simpan ke `<slug>/youtube.md`.
 Terakhir, perbarui `katalog.md`: tambahkan film ke "Film selesai" (tanggal, slug, judul, durasi/format,

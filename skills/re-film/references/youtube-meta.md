@@ -28,8 +28,29 @@ Orang & Blog · Komedi · Hiburan · Berita & Politik · Gaya & Tips · Pendidik
 Biasanya: fakta sains/alam → Sains & Teknologi atau Pendidikan; sejarah/cerita → Pendidikan atau Film & Animasi;
 cerita fiksi lucu → Film & Animasi atau Komedi. Sebutkan alasannya dalam satu kalimat.
 
+## Prompt thumbnail (selalu dibuat, untuk Shorts maupun video biasa)
+Tulis prompt siap tempel untuk generator gambar AI (Gemini/Imagen, ChatGPT, Midjourney, dll.) dalam **bahasa Inggris**
+(generator paling patuh pada prompt Inggris), di dalam blok kode supaya mudah disalin. Thumbnail harus terasa satu
+dunia dengan videonya, jadi prompt menggambarkan tokoh dan gaya persis seperti di `TREATMENT.md`.
+
+Isi prompt, berurutan:
+1. **Ukuran:** video biasa → `16:9, 1280x720`; Shorts → `9:16, 1080x1920` (subjek di tengah, karena feed Shorts
+   memotong pinggir).
+2. **Subjek utama:** BoxBot dengan warna & aksesoris film ini ("a cute glossy plastic box-shaped robot, rounded
+   corners, orange #ff8a3d, big round black eyes, alarm clock on its head"), ekspresi yang kuat (kaget/takjub),
+   ditambah satu benda kunci cerita (mis. T-Rex mainan plastik).
+3. **Momen:** satu gambar yang memancing rasa penasaran (biasanya hook atau twist), bukan rangkuman seluruh video.
+4. **Gaya:** sesuai treatment ("toy diorama, glossy plastic, soft studio reflections, tilt-shift, vibrant saturated
+   colors, 3D render"), palet hex film, kontras tinggi antara subjek dan latar.
+5. **Teks:** maksimal 3-4 kata, dalam **bahasa suara**, ditulis persis di dalam tanda kutip, huruf tebal besar dengan
+   outline gelap, posisinya disebutkan (mis. "top third"). Teks thumbnail berbeda dari judul dan saling melengkapi.
+6. **Larangan:** `no watermark, no logo, no extra text, no realistic humans`.
+
+Berikan juga 1 varian alternatif (sudut/momen lain) dan satu baris saran: kalau hasil AI melenceng dari tokoh,
+pakai still dari video sebagai referensi gambar (`node scripts/stills.mjs <slug> <detik>`) lalu minta generator
+"keep the same character design". Simpan prompt-nya di `youtube.md`.
+
 ## Tambahan singkat
-- Ide thumbnail (untuk video non-Shorts): satu kalimat, frame mana yang dipakai + teks ≤4 kata.
 - Pengingat end screen: pasang elemen di YouTube Studio tepat di atas kotak placeholder (20 detik terakhir).
 - Centang "Konten yang diubah atau sintetis"? Narasi TTS dan animasi 3D buatan kode biasanya *tidak* wajib dilabel
   kecuali menampilkan orang/peristiwa nyata secara realistis; sebutkan ini sebagai catatan, keputusan di user.
