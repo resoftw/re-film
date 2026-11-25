@@ -204,6 +204,7 @@ transisi, musik. Tujuannya supaya tiap film punya wajah sendiri dan tidak terasa
   - `Captions` dan `Endscreen` (placeholder kotak video + lingkaran subscribe; prop `latar` untuk adegan 3D pelan).
   - `Teks`: `Label` (teks informasi yang "pop", posisi tengah atau `kiri`), `Kilat`, `Sapuan` (transisi cahaya).
   - `Footage`: `FotoBingkai` (gambar/video nyata berbingkai polaroid/tv/kartu) dan `PapanFoto` (gambar di dunia 3D).
+  - `Sfx`: daftar efek suara terjadwal + `kata(words, "...")` untuk mengambil waktu kata dari transkrip.
   - Kit di `<kerja>` yang lebih lama dari skill tidak otomatis diperbarui. Kalau komponen di atas belum ada di
     `<kerja>/kit`, salin **hanya file yang belum ada** dari `<skill>/assets/workspace/kit/`.
 - Aset: cek `<kerja>/aset/` dulu, karena mungkin sudah pernah diunduh. Kalau belum ada, unduh dari sumber di
@@ -216,7 +217,12 @@ transisi, musik. Tujuannya supaya tiap film punya wajah sendiri dan tidak terasa
   Pexels/Pixabay bila API key-nya ada). Ikuti `references/footage.md`: hanya lisensi aman (PD/CC0/CC BY/BY-SA,
   Pexels, Pixabay; hindari NC/ND), maksimal ±20 % durasi, selalu dibingkai lewat kit `Footage` (`FotoBingkai` 2D
   atau `PapanFoto` 3D), dan semua dicatat di `CREDITS.md` + deskripsi YouTube bila wajib atribusi.
-- Musik/SFX opsional: `<Audio>` dengan volume rendah, narasi harus tetap jelas.
+- **SFX (selalu dipakai, supaya dramatis):** ikuti `references/sfx.md`. Buat pustaka sintesis sekali
+  (`python <skill>/scripts/sfx.py pustaka <kerja>/aset/sfx/sintesis`: whoosh, pop, ding, boom, retak, kaca_pecah,
+  dll.). Untuk suara nyata yang khusus, cari yang gratis dengan `sfx.py cari "<kueri Inggris>"` (Commons, Freesound
+  CC0). Pasang lewat kit `Sfx`. Waktunya dari kata di transkrip (`kata(words, "explodes")`), rata-rata satu SFX
+  per 2-4 detik, selalu di bawah narasi, dan cek `max_volume` < −1 dB di hasil akhir.
+- Musik latar opsional: `<Audio>` dengan volume rendah, narasi harus tetap jelas.
 
 Prinsip animasi (inilah yang membuat hasilnya terlihat dibuat sungguh-sungguh):
 - Semua gerak dihitung dari waktu adegan `t`, jangan dari state. Setiap reaksi visual jatuh 0-3 frame sebelum

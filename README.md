@@ -14,7 +14,7 @@ dari ide sampai siap unggah, dengan tokoh robot kotak plastik berkilat dalam dun
 3. **Cerita & narasi.** Riset di web, cerita dengan hook, twist, dan outro, lalu narasi siap tempel ke
    **Google AI Studio TTS** (adegan bernomor, detik, nada).
 4. **Audio.** Kamu kirim hasil TTS-nya. Claude mentranskrip per kata, dan waktu adegan mengikuti audio asli.
-5. **Video.** Remotion + three.js: robot BoxBot plastik, aset gratis (Kenney, Quaternius, Poly Haven, …), dan gaya
+5. **Video.** Remotion + three.js: robot BoxBot plastik, aset gratis (Kenney, Quaternius, Poly Haven, …), footage nyata & SFX gratis, dan gaya
    visual yang berganti mengikuti tema supaya tidak terasa otomatis. Subtitle mengikuti kata yang diucapkan, dan
    video non-Shorts ≥ 3 menit diberi placeholder end screen 20 detik.
 6. **Siap unggah.** Saran judul, deskripsi (dengan bab), tag, kategori YouTube, dan prompt thumbnail siap tempel ke
@@ -48,8 +48,8 @@ Lalu cukup bilang ke Claude: *"bikin film baru dong"*.
 ```
 skills/re-film/
   SKILL.md              alur kerja lengkap (dibaca Claude)
-  scripts/              yt_check.py (cek YouTube), transcribe.py (transkrip per kata), cari_footage.py (gambar/video gratis + lisensi)
-  assets/workspace/     dipasang SEKALI di folder kerja: package.json, kit/ (BoxBot, Stage, Glb, Captions, Endscreen, Teks, Footage)
+  scripts/              yt_check.py (cek YouTube), transcribe.py (transkrip per kata), cari_footage.py (gambar/video gratis + lisensi), sfx.py (SFX gratis + sintesis)
+  assets/workspace/     dipasang SEKALI di folder kerja: package.json, kit/ (BoxBot, Stage, Glb, Captions, Endscreen, Teks, Footage, Sfx)
   assets/film/          kerangka satu film (src/, public/)
   references/           menu gaya visual, sumber aset gratis, panduan metadata YouTube
 ```
